@@ -7,14 +7,15 @@ class CsvImporterWorker
     headers =  CSV.open(csv_file, &:readline)
     @fields = headers[0].split(";")
     CSV.foreach(csv_file, headers: true) do |contact|
+      bin = CreditCardBin.new(contact[4])
       current_user.contacts.create(
         name: contact[0],
         birth: contact[1],
         phone: contact[2],
         address: contact[3],
         credit_card: contact[4],
-        franchise: contact[5],
-        email: contact[6],
+        franchise: bin.brand,
+        email: contact[5],
       )
     end
   end

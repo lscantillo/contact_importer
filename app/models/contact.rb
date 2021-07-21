@@ -17,8 +17,8 @@
 class Contact < ApplicationRecord
   belongs_to :user
   REGEX_PATTERN = /^(.+)@(.+)$/
-  validates :name, presence: true, format: {with: /^[a-zA-Z0-9]{4,10}$/, message: "No special characters allow"}
-  validates :email,presence:true, format: {with: REGEX_PATTERN, message: "Invalid email"}
+  validates :name, presence: true, format: {with: /^[a-zA-Z0-9]{4,10}$/, message: "No special characters allow", multiline: true}
+  validates :email,presence:true, format: {with: REGEX_PATTERN, message: "Invalid email", multiline: true}
   validates :birth, :phone, :address, :credit_card, :franchise, :email, presence: true
 
 end

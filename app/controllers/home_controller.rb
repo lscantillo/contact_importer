@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   end
 
   def import
-    CsvImporterWorker.perform_asyn(current_user,params[:file])
+    CsvImporterWorker.perform_async(current_user,params[:file])
+    @contacts = Contact.all
   end
 end
