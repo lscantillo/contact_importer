@@ -1,0 +1,30 @@
+<% if @contacts %>
+<div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Date of Birth</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Address</th>
+              <th scope="col">Credit Card</th>
+              <th scope="col">Franchise</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @contacts.each do |c| %>
+            <tr>
+              <td>c[0]</td>
+              <td>c[1]</td>
+              <td>c[2]</td>
+              <td>c[3]</td>
+              <td>c[4]</td>
+              <td>c[5]</td>
+              <td>c[6]</td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+<% end %>

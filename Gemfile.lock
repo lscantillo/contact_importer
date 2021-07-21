@@ -80,6 +80,7 @@ GEM
     concurrent-ruby (1.1.9)
     connection_pool (2.2.5)
     crass (1.0.6)
+    credit_card_bins (0.0.3)
     database_cleaner (1.8.5)
     devise (4.8.0)
       bcrypt (~> 3.0)
@@ -255,6 +256,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  credit_card_bins
   database_cleaner (~> 1.8.5)
   devise
   dotenv-rails (~> 2.7.6)
