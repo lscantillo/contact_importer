@@ -5,8 +5,6 @@ class HomeController < ApplicationController
   end
 
   def import
-    headers =  CSV.open(params[:file], &:readline)
-    @fields = headers[0].split(";")
-    #render 'select_fields'
+    CsvImporterWorker.perform_asyn(current_user,params[:file])
   end
 end

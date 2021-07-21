@@ -32,6 +32,7 @@ gem 'devise'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'credit_card_bins'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -54,6 +55,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'annotate'
 end
 
 group :test do
